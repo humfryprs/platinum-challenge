@@ -1,30 +1,45 @@
-import React from "react";
-import "./assets/css/normalize.css";
-import "./assets/css/reset.css";
-import "./assets/css/bootstrap.css";
-import './assets/css/global.css';
-import Header from './components/header';
-import HeroSection from './components/hero-section';
-import Testimonial from './components/testimonial';
-import Why from './components/why';
-import CTA from './components/cta_banner';
-import FAQ from './components/faq';
-import OurServices from './components/our-services';
-import Footer from './components/footer';
+// import React from "react";
+// import { Routes, Route } from "react-router-dom";
+// import Header from "./components/header";
+// import Homepage from "./pages/homepage";
 
-function App () {
+
+// function App() {
+//   return (
+//     <div>
+//       <Header />
+//       <Routes>
+//         <Route path="/" element={<Homepage />} />
+//         <Route path="/cari-mobil" element={<Cari_Mobil />} />
+//         {/* <Route path="/" element={<Hasil_Pencarian />} /> */}
+//       </Routes>
+      
+//     </div>
+//   );
+// }
+
+// export default App;
+
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Header from './components/header';
+import Homepage from './pages/homepage';
+import Cari_Mobil from "./pages/cari-mobil";
+import Detail from './pages/Detail';
+import Footer from "./components/footer";
+
+const App = () => {
   return (
-    <div>
+    <div className="App">
       <Header />
-      <HeroSection />
-      <OurServices />
-      <Why />
-      <Testimonial />
-      <CTA />
-      <FAQ />
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/cari-mobil" element={<Cari_Mobil />} />
+        <Route path="/cari-mobil/:productId" element={<Detail />} />
+      </Routes>
       <Footer />
     </div>
   );
-}
+};
 
 export default App;

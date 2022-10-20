@@ -1,17 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import Accordion from "../accordion";
+
 import "./style.css";
 
 const FAQ = () => {
-  const [active, setActive] = useState(false);
-  const [count, setCount] = useState(0);  
+  // const [active, setActive] = useState(false);
+  // const [count, setCount] = useState(0);  
 
-  useEffect(() => {
-    if (count % 2 == 0) {
-      setActive(true);
-    } else {
-      setActive(false);
-    }
-  });
+  // useEffect(() => {
+  //   if (count % 2 == 0) {
+  //     setActive(true);
+  //   } else {
+  //     setActive(false);
+  //   }
+  // });
   
   return (
     <div className="faq">
@@ -22,151 +24,7 @@ const FAQ = () => {
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
           </div>
           <div className="col-lg-7">
-            <div
-              className="accordion accordion-flush"
-              id="accordionFlushExample"
-            >
-              <div className="accordion-item">
-                <h2 className="accordion-header" id="flush-headingOne">
-                  <button
-                    className={`accordion-button ${active ? "" : "collapsed"}`}
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapseOne"
-                    aria-expanded="false"
-                    aria-controls="flush-collapseOne"
-                    onClick={() => setCount(count + 1)}
-                  >
-                    Apa saja syarat yang dibutuhkan?
-                  </button>
-                </h2>
-                <div
-                  id="flush-collapseOne"
-                  className={`accordion-collapse collapse ${
-                    active ? "show" : ""
-                  }`}
-                  aria-labelledby="flush-headingOne"
-                  data-bs-parent="#accordionFlushExample"
-                >
-                  <div className="accordion-body">
-                    Placeholder content for this accordion, which is intended to
-                    demonstrate
-                  </div>
-                </div>
-              </div>
-              <div className="accordion-item">
-                <h2 className="accordion-header" id="flush-headingOne">
-                  <button
-                    className={`accordion-button ${active ? "" : "collapsed"}`}
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapseOne"
-                    aria-expanded="false"
-                    aria-controls="flush-collapseOne"
-                    onClick={() => setCount(count + 1)}
-                  >
-                    Apa saja syarat yang dibutuhkan?
-                  </button>
-                </h2>
-                <div
-                  id="flush-collapseOne"
-                  className={`accordion-collapse collapse ${
-                    active ? "show" : ""
-                  }`}
-                  aria-labelledby="flush-headingOne"
-                  data-bs-parent="#accordionFlushExample"
-                >
-                  <div className="accordion-body">
-                    Placeholder content for this accordion, which is intended to
-                    demonstrate
-                  </div>
-                </div>
-              </div>
-              <div className="accordion-item">
-                <h2 className="accordion-header" id="flush-headingOne">
-                  <button
-                    className={`accordion-button ${active ? "" : "collapsed"}`}
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapseOne"
-                    aria-expanded="false"
-                    aria-controls="flush-collapseOne"
-                    onClick={() => setCount(count + 1)}
-                  >
-                    Apa saja syarat yang dibutuhkan?
-                  </button>
-                </h2>
-                <div
-                  id="flush-collapseOne"
-                  className={`accordion-collapse collapse ${
-                    active ? "show" : ""
-                  }`}
-                  aria-labelledby="flush-headingOne"
-                  data-bs-parent="#accordionFlushExample"
-                >
-                  <div className="accordion-body">
-                    Placeholder content for this accordion, which is intended to
-                    demonstrate
-                  </div>
-                </div>
-              </div>
-              <div className="accordion-item">
-                <h2 className="accordion-header" id="flush-headingOne">
-                  <button
-                    className={`accordion-button ${active ? "" : "collapsed"}`}
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapseOne"
-                    aria-expanded="false"
-                    aria-controls="flush-collapseOne"
-                    onClick={() => setCount(count + 1)}
-                  >
-                    Apa saja syarat yang dibutuhkan?
-                  </button>
-                </h2>
-                <div
-                  id="flush-collapseOne"
-                  className={`accordion-collapse collapse ${
-                    active ? "show" : ""
-                  }`}
-                  aria-labelledby="flush-headingOne"
-                  data-bs-parent="#accordionFlushExample"
-                >
-                  <div className="accordion-body">
-                    Placeholder content for this accordion, which is intended to
-                    demonstrate
-                  </div>
-                </div>
-              </div>
-              <div className="accordion-item">
-                <h2 className="accordion-header" id="flush-headingOne">
-                  <button
-                    className={`accordion-button ${active ? "" : "collapsed"}`}
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapseOne"
-                    aria-expanded="false"
-                    aria-controls="flush-collapseOne"
-                    onClick={() => setCount(count + 1)}
-                  >
-                    Apa saja syarat yang dibutuhkan?
-                  </button>
-                </h2>
-                <div
-                  id="flush-collapseOne"
-                  className={`accordion-collapse collapse ${
-                    active ? "show" : ""
-                  }`}
-                  aria-labelledby="flush-headingOne"
-                  data-bs-parent="#accordionFlushExample"
-                >
-                  <div className="accordion-body">
-                    Placeholder content for this accordion, which is intended to
-                    demonstrate
-                  </div>
-                </div>
-              </div>
-            </div>
+            <Accordion/>
           </div>
         </div>
       </div>

@@ -5,6 +5,10 @@
 	/* height: 1200px; */
 }
 
+.hide{
+	display: none !important;
+}
+
 .hero-content {
 	padding: 85px 0;
 }

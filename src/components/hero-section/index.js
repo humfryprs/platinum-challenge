@@ -1,8 +1,17 @@
 import React from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import "./style.css";
 import Car from "../../assets/images/img_car.png";
 
 const HeroSection = () => {
+  // let navigate = useNavigate();
+  // const routeChange = () => {
+  //   let path = `/cari-mobil`;
+  //   navigate(path);
+  // };
+  const location = useLocation();
+  const navigate = useNavigate();
+
   return (
     <div className="hero-section">
       <div className="container">
@@ -15,9 +24,12 @@ const HeroSection = () => {
                 kualitas terbaik dengan harga terjangkau. Selalu siap melayani
                 kebutuhanmu untuk sewa mobil selama 24 jam.
               </p>
-              <a href="http://" className="btn btn-success button">
+              <button
+                className={location.pathname != "/" ? "hide" : "btn btn-success button "}
+                onClick={() => navigate('/cari-mobil')}
+              >
                 Mulai Sewa Mobil
-              </a>
+              </button>
             </div>
           </div>
         </div>

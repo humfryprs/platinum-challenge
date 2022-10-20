@@ -1,7 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./style.css";
 
 const HeroSection = () => {
+  const navigate = useNavigate();
   return (
     <section className="cta-banner">
       <div className="container">
@@ -14,9 +16,7 @@ const HeroSection = () => {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
                 </p>
-                <a href="http://" className="btn btn-success button">
-                  Mulai Sewa Mobil
-                </a>
+                <button className="btn btn-success button" onClick={() => navigate('/cari-mobil')}>Mulai Sewa Mobil</button>                  
               </div>
             </div>
           </div>

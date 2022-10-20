@@ -7,6 +7,10 @@
   z-index: 1;
 }
 
+.hide-nav-menu{
+  display: none !important;
+}
+
 .logo {
   width: 151px;
   display: flex;
@@ -33,17 +37,6 @@
 
 .burger-icon {
   display: none;
-}
-
-.button {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 20px;
-  color: #FFFFFF;
-  background: #5CB85F;
-  border-radius: 2px;
-  padding: 8px 12px;
-  border-color: #5CB85F;
 }
 
 .menu .button {

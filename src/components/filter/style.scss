@@ -1,0 +1,44 @@
+.filter {
+  position: absolute;
+  top: 525px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  .row {
+    background: #ffffff;
+    /* Shadow/High */
+
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    align-items: center;
+    padding: 28px 28px 0px 28px;
+  }
+  .col {
+    padding: 0px;
+  }
+  .form {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    gap: 16px;
+    align-items: flex-end;
+  }
+  .input-group {
+    flex-direction: column;
+  }
+  .input-field {
+    height: 36px;
+    background: #ffffff;
+    border: 1px solid #d0d0d0;
+    border-radius: 2px;
+  }
+  .input-option{
+  background: url("./fi_chevron-down.svg") no-repeat right;
+    background-size: 18px 18px;
+    -webkit-appearance: none;
+    background-position: right 12px bottom 9px;
+  }
+  .button{
+    margin-bottom: 24px;
+  }
+}
