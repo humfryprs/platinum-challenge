@@ -101,30 +101,45 @@ const Cari_Mobil = () => {
   const category = useRef('');
   const harga = useRef('');
   const statusOrder = useRef('');
-  // const price = () => {
-  //   if(harga.current.value < 400000){
-  //     return{
-  //       minPrice: 0,
-  //       maxPrice: 400000
-  //     }
-  //   }else if(harga.current.value > 400000 && harga.current.value < 600000 ){
-  //     return{
-  //       minPrice: 400000,
-  //       maxPrice: 600000
-  //     }
-  //   }else {
-  //     return{
-  //       maxPrice: 600000
-  //     }
-  //   }
-  // }
+  const price = () => {
+    // menggunakan if else
+    // if (harga.current.value === "small") {
+    //   return {
+    //     maxPrice: 400000,
+    //   }
+    // }else if (harga.current.value === "medium"){
+    //   return {
+    //     minPrice: 400000,
+    //     maxPrice: 600000
+    //   }
+    // } else if(harga.current.value === "large") {
+    //   return {
+    //     minPrice: 600000
+    //   }
+    // } else {
+    //   return ""
+    // }
+
+    // menggunakan switch
+    switch (harga.current.value) {
+      case "small":
+        return { maxPrice: 400000 };
+      case "medium":
+        return { minPrice: 400000, maxPrice: 600000 };
+      case "large":
+        return { minPrice: 600000 };
+      default:
+        return "";
+    }
+  };
 
   const getData = (e) => {
     e.preventDefault();
     const params = {
       name: namaMobil.current.value,
       category: category.current.value,
-      price: harga.current.value,
+      minPrice: price().minPrice,
+      maxPrice: price().maxPrice,
       isRented: statusOrder.current.value,
     };
     // const descending = (data) => {
@@ -137,8 +152,11 @@ const Cari_Mobil = () => {
     // Axios.get(`${baseUrl}/cars?name=${namaMobil.current.value}&category=${category.current.value}&price=${harga.current.value}&status=${statusOrder.current.value}
     Axios.get(`${baseUrl}/customer/v2/car?${queryData(params)}`)
       .then((response) => {
-        console.log(response);
-        setCars(response.data.cars)
+        if (response.data.cars.length > 0) {
+          setCars(response.data.cars);
+        } else {
+          setEmptyData(true);
+        }
         setLoading(false)
         // if (response) {
         //   setTimeout(() => {
