@@ -1,0 +1,9 @@
+span{
+	margin: 0px 3px;
+}
+
+@media (max-width:991px) {
+		.footer .col-md-12 {
+			margin: 8px 0px;
+	}
+}

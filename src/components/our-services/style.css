@@ -1,0 +1,23 @@
+.our-services img{
+	margin-right: 16px;
+}
+
+.row{
+	align-items: center;
+}
+
+@media (max-width:991px){
+
+	.our-services img{
+		justify-content: center;
+		margin: 0px 0px 24px 0px;
+	}
+
+	.our-services .image{
+		width: 100%;
+	}
+
+	.our-services span img{
+		margin: 0px 16px 0px 0px;
+	}
+}

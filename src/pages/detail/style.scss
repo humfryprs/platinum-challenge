@@ -1,0 +1,49 @@
+.detail {
+  .row{
+    align-items: flex-start !important;
+  }
+  li {
+    list-style: circle;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+  %box {
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+  }
+  .col{
+    @extend %box;
+    margin-right: 16px;
+  }
+  .col-5{
+    @extend %box;
+    margin-left: 16px;
+  }
+
+  .image{
+    padding: 24px 68px 0px 68px;
+  }
+  .accordion-button{
+    border:none;
+    margin: 0px;
+    padding: 16px 16px 16px 0px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0em;
+  }
+  .total {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    p {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
