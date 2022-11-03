@@ -27,6 +27,7 @@ import Homepage from './pages/homepage';
 import Cari_Mobil from "./pages/cari-mobil";
 import Detail from './pages/detail';
 import Footer from "./components/footer";
+import Etiket from './pages/Etiket';
 
 const App = () => {
   return (
@@ -36,6 +37,7 @@ const App = () => {
         <Route path="/" element={<Homepage />} />
         <Route path="/cari-mobil" element={<Cari_Mobil />} />
         <Route path="/cari-mobil/:productId" element={<Detail />} />
+        <Route path="/e-tiket" element={<Etiket />} />
       </Routes>
       <Footer />
     </div>
