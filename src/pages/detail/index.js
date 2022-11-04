@@ -4,10 +4,12 @@ import { useParams } from 'react-router-dom';
 import './style.scss'
 import "../../assets/css/bootstrap.css";
 import Accordion from "../../../node_modules/react-bootstrap/Accordion";
+import Calendar from "react-calendar";
 
 const Detail = () => {
 
   const [detail, setDetail] = useState({});
+  const [value, onChange] = useState(new Date());
   let { productId } = useParams();
 
   const baseUrl = "https://bootcamp-rent-cars.herokuapp.com";
@@ -77,14 +79,18 @@ const Detail = () => {
             </Accordion>
           </div>
           <div className="col-5">
-            <div className='image'>
-            <img src={detail.image} alt="" />
+            <div className="image">
+              <img src={detail.image} alt="" />
             </div>
             <h1>{detail.name}</h1>
+            <div>
+              <Calendar onChange={onChange} value={value} />
+            </div>
             <div className="total">
               <p>Total</p>
               <p>{detail.price}</p>
             </div>
+            <button className="btn btn-success">Lanjutkan Pembayaran</button>
           </div>
         </div>
       </div>
