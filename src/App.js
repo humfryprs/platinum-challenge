@@ -26,6 +26,7 @@ import Header from './components/header';
 import Homepage from './pages/homepage';
 import Cari_Mobil from "./pages/cari-mobil";
 import Detail from './pages/detail';
+import E_Tiket from './pages/e_tiket'
 import Footer from "./components/footer";
 import Etiket from './pages/Etiket';
 
