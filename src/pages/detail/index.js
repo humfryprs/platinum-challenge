@@ -1,13 +1,12 @@
-import React, { useState, useEffect, useRef } from 'react';
-import Axios from 'axios';
-import { useParams } from 'react-router-dom';
-import './style.scss'
+import React, { useState, useEffect, useRef } from "react";
+import Axios from "axios";
+import { useParams, useNavigate } from "react-router-dom";
+import "./style.scss";
 import "../../assets/css/bootstrap.css";
 import Accordion from "../../../node_modules/react-bootstrap/Accordion";
 import Calendar from "react-calendar";
 
 const Detail = () => {
-
   const [detail, setDetail] = useState({});
   const [value, onChange] = useState(new Date());
   let { productId } = useParams();
@@ -15,12 +14,12 @@ const Detail = () => {
   const baseUrl = "https://bootcamp-rent-cars.herokuapp.com";
 
   const fetch = useRef(true);
-  
+
   const getDetail = (productId) => {
     Axios.get(`${baseUrl}/customer/car/${productId}`)
-    .then((response) => {
-      console.log(response.data)
-      setDetail(response.data);
+      .then((response) => {
+        console.log(response.data);
+        setDetail(response.data);
       })
       .catch((error) =>
         // handle error
@@ -32,10 +31,11 @@ const Detail = () => {
   useEffect(() => {
     if (fetch.current) {
       fetch.current = false;
-      getDetail(productId)
+      getDetail(productId);
     }
   }, [productId]);
-  
+
+  const navigate = useNavigate();
   return (
     <div className="detail">
       <div className="container">
@@ -44,32 +44,24 @@ const Detail = () => {
             <h2>Tentang Paket</h2>
             <h2>Include</h2>
             <ul>
-              <li>
-                Apa saja yang termasuk dalam paket misal durasi max 12 jam
-              </li>
+              <li>Apa saja yang termasuk dalam paket misal durasi max 12 jam</li>
               <li>Sudah termasuk bensin selama 12 jam </li>
               <li>Sudah termasuk Tiket Wisata</li>
               <li>Sudah termasuk pajak</li>
             </ul>
             <h2>Include</h2>
             <ul>
-              <li>
-                Apa saja yang termasuk dalam paket misal durasi max 12 jam
-              </li>
+              <li>Apa saja yang termasuk dalam paket misal durasi max 12 jam</li>
               <li>Sudah termasuk bensin selama 12 jam </li>
               <li>Sudah termasuk Tiket Wisata</li>
               <li>Sudah termasuk pajak</li>
             </ul>
             <Accordion>
               <Accordion.Item eventKey="0">
-                <Accordion.Header>
-                  Refund, Reschedule, Overtime
-                </Accordion.Header>
+                <Accordion.Header>Refund, Reschedule, Overtime</Accordion.Header>
                 <Accordion.Body>
                   <ul>
-                    <li>
-                      Apa saja yang termasuk dalam paket misal durasi max 12 jam
-                    </li>
+                    <li>Apa saja yang termasuk dalam paket misal durasi max 12 jam</li>
                     <li>Sudah termasuk bensin selama 12 jam </li>
                     <li>Sudah termasuk Tiket Wisata</li>
                     <li>Sudah termasuk pajak</li>
@@ -90,7 +82,9 @@ const Detail = () => {
               <p>Total</p>
               <p>{detail.price}</p>
             </div>
-            <button className="btn btn-success">Lanjutkan Pembayaran</button>
+            <button className="btn btn-success button " onClick={() => navigate("/payment")}>
+              Lanjutkan Pembayaran
+            </button>
           </div>
         </div>
       </div>

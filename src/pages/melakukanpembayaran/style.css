@@ -1,0 +1,163 @@
+.detailpesanan {
+  margin: 0 100px;
+
+  box-shadow: 0px 0px 10px 0px #00000026;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: start;
+}
+.row1 {
+  padding: 10px 0;
+}
+.row2 {
+  padding: 10px 0;
+}
+
+.detailpesanan h1 {
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.row2 p {
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.detailpesanan2 {
+  margin: 24px 105px;
+}
+.detailpesanan2 .row3 {
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+.detailpesanan2 .coll1 {
+  box-shadow: 0px 0px 4px 0px #00000026;
+
+  border-radius: 8px;
+  padding: 20px;
+  text-align: start;
+}
+.detailpesanan2 .coll1 li {
+  font-family: Arial;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.detailpesanan2.coll1 h2 {
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.detailpesanan2 .coll1 p {
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.detailpesanan2 .coll2 {
+  box-shadow: 0px 0px 4px 0px #00000026;
+
+  border-radius: 8px;
+  padding: 20px;
+  text-align: start;
+}
+.detailpesanan2 .coll2 h1 {
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.detailpesanan2 .coll2 h2 {
+  font-family: Arial;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.detailpesanan2 .totalpembayaran {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.detailpesanan2 .totalpembayaran h1 {
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.detailpesanan2 .totalpembayaran h2 {
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: right;
+}
+.detailpesanan2 .hargapembayaran li {
+  list-style: square;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: start;
+}
+.detailpesanan2 .hargapembayaran h2 {
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: end;
+}
+.detailpesanan2 h3 {
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.detailpesanan2 .hargapembayaran h3 {
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: right;
+  color: #5cb85f;
+}
+.detailpesanan2 .coll2 li {
+  list-style: square;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: start;
+}
+.pembayaran .btn {
+  background: #5cb85f;
+  border-radius: 2px;
+  border: none;
+  width: 100%;
+}
