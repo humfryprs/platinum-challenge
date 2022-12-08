@@ -1,7 +1,38 @@
 .detail {
-  .row{
-    align-items: flex-start !important;
+  // datepicker
+  .datepicker:active {
+    border: 1px solid red !important;
   }
+
+  .datepicker:focus {
+    border: 1px solid red !important;
+  }
+
+  .datepicker:visited {
+    border: 1px solid red !important;
+  }
+
+  .react-datepicker__day--keyboard-selected {
+    background-color: #35b0a7 !important;
+    width: 40px !important;
+    height: 40px !important	;
+    border-radius: 20px !important;
+    margin: auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .react-datepicker__month-container {
+    width: 339px;
+    height: 388px;
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+  }
+
   li {
     list-style: circle;
   }
@@ -13,11 +44,11 @@
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
     border-radius: 8px;
   }
-  .col{
+  .col {
     @extend %box;
     margin-right: 16px;
   }
-  .col-5{
+  .col-5 {
     @extend %box;
     margin-left: 16px;
   }
@@ -26,13 +57,14 @@
     border-radius: 2px;
     border: none;
     width: 100%;
+    margin-bottom: 20px;
   }
 
-  .image{
+  .image {
     padding: 24px 68px 0px 68px;
   }
-  .accordion-button{
-    border:none;
+  .accordion-button {
+    border: none;
     margin: 0px;
     padding: 16px 16px 16px 0px;
     font-size: 24px;

@@ -1,0 +1,46 @@
+.e_tiket .invoice-detail {
+  padding: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+.e_tiket .status {
+  text-align: center;
+}
+.e_tiket .status img {
+  height: 48px;
+  width: auto;
+  margin-bottom: 16px;
+}
+.e_tiket .status h2 {
+  margin-bottom: 16px;
+}
+.e_tiket .status p {
+  margin-bottom: 16px;
+}
+.e_tiket .card {
+  border: none;
+}
+.e_tiket .card .col-4 {
+  justify-content: end;
+  position: relative;
+}
+.e_tiket .button {
+  align-content: center;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0em;
+  color: #0D28A6;
+  background: linear-gradient(0deg, #FFFFFF, #FFFFFF);
+  border: 1px solid #0D28A6;
+  position: absolute;
+  right: 12px;
+}
+.e_tiket .button img {
+  width: 18px;
+  height: auto;
+  margin-right: 10px;
+}
+.e_tiket .invoice-view .col-12 {
+  padding: 0;
+}/*# sourceMappingURL=style.css.map */
