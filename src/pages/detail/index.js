@@ -13,6 +13,8 @@ const Detail = () => {
   //Calendar
   const [dateRange, setDateRange] = useState([null, null]);
   const [startDate, endDate] = dateRange;
+  const [startDate, setStartDate]
+  const []
   const [emptyData, setEmptyData] = useState(false);
   const [detail, setDetail] = useState({});
   // const [value, onChange] = useState(new Date());
@@ -42,7 +44,7 @@ const Detail = () => {
       finishRentAt: endDate.current.value,
     };
     setEmptyData(false)
-    Axios.post(`${baseUrl}/customer/order?${queryData(params)}`)
+    Axios.post(`${baseUrl}/customer/order?`, )
       .then((response) => {
         if (response.data.cars.length != null) {
           setDateRange(response.data.startDate);
