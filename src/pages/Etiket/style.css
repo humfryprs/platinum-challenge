@@ -1,0 +1,37 @@
+.kartu{
+    width: 605px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+.detail-pembayaran{
+    text-align:  center;
+    margin-top: 40px;
+}
+.card .kotak-pembayaran{
+     padding: 30px;
+}
+.detail-pembayaran img{
+    margin-bottom: 20px;
+    /* padding: 30px; */
+}
+.detail-pembayaran h3{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.detail-pembayaran p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 50px;
+}
+.kotak-pembayaran .above{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+/* .Rectangle{
+    width: 100%;
+} */

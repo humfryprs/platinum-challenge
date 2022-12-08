@@ -13,8 +13,6 @@ const Detail = () => {
   //Calendar
   const [dateRange, setDateRange] = useState([null, null]);
   const [startDate, endDate] = dateRange;
-  const [startDate, setStartDate]
-  const []
   const [emptyData, setEmptyData] = useState(false);
   const [detail, setDetail] = useState({});
   // const [value, onChange] = useState(new Date());
@@ -87,32 +85,24 @@ const Detail = () => {
             <h2>Tentang Paket</h2>
             <h2>Include</h2>
             <ul>
-              <li>
-                Apa saja yang termasuk dalam paket misal durasi max 12 jam
-              </li>
+              <li>Apa saja yang termasuk dalam paket misal durasi max 12 jam</li>
               <li>Sudah termasuk bensin selama 12 jam </li>
               <li>Sudah termasuk Tiket Wisata</li>
               <li>Sudah termasuk pajak</li>
             </ul>
             <h2>Include</h2>
             <ul>
-              <li>
-                Apa saja yang termasuk dalam paket misal durasi max 12 jam
-              </li>
+              <li>Apa saja yang termasuk dalam paket misal durasi max 12 jam</li>
               <li>Sudah termasuk bensin selama 12 jam </li>
               <li>Sudah termasuk Tiket Wisata</li>
               <li>Sudah termasuk pajak</li>
             </ul>
             <Accordion>
               <Accordion.Item eventKey="0">
-                <Accordion.Header>
-                  Refund, Reschedule, Overtime
-                </Accordion.Header>
+                <Accordion.Header>Refund, Reschedule, Overtime</Accordion.Header>
                 <Accordion.Body>
                   <ul>
-                    <li>
-                      Apa saja yang termasuk dalam paket misal durasi max 12 jam
-                    </li>
+                    <li>Apa saja yang termasuk dalam paket misal durasi max 12 jam</li>
                     <li>Sudah termasuk bensin selama 12 jam </li>
                     <li>Sudah termasuk Tiket Wisata</li>
                     <li>Sudah termasuk pajak</li>
