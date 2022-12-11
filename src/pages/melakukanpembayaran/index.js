@@ -1,5 +1,6 @@
 import React from "react";
 import logo1 from "../../assets/images/fi_users.jpg";
+import { Link } from "react-router-dom";
 
 import "./style.css";
 
@@ -46,7 +47,10 @@ const Pembayaran = () => {
         <div className="row row3">
           <div className="col-lg-7 col-md-12 coll1">
             <h2>Pilih Bank Transfer</h2>
-            <p>Kamu Bisa Membayar Dengan Transfer Melalui ATM, Internet Banking, atau Mobile Banking</p>
+            <p>
+              Kamu Bisa Membayar Dengan Transfer Melalui ATM, Internet Banking,
+              atau Mobile Banking
+            </p>
             <ul>
               <li>BCA Transfer</li>
               <li>BNI Transfer</li>
@@ -113,7 +117,9 @@ const Pembayaran = () => {
                 <h2>Rp 3.500.000</h2>
               </div>
             </div>
-            <button className="btn btn-success button ">Lanjutkan Pembayaran</button>
+            <Link className="btn btn-success" type="submit" to={`/e-tiket`}>
+              Pembayaran
+            </Link>
           </div>
         </div>
       </div>
