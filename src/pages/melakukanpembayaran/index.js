@@ -1,11 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import logo1 from "../../assets/images/fi_users.jpg";
+import ArrowLeft from "../../assets/images/arrow-left.svg";
+import Rect from "../../assets/images/rect.svg";
+import { Link } from "react-router-dom";
+import Check from "../../assets/images/check.svg";
 
 import "./style.css";
 
 const Pembayaran = () => {
+  const [selected, setSelected] = useState();
+  const selectClick = (index) => {
+    setSelected(index);
+  };
   return (
-    <div className="pembayaran">
+    <section className="pembayaran">
+      <div className="desc">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-3 desc1">
+              <Link to={-1}>
+                <img src={ArrowLeft} alt="back to detail mobil" />
+              </Link>
+              <h1>Pembayaran</h1>
+            </div>
+            <div className="col-lg-3 desc1">
+              <div className="bg1">1</div>
+              <h5>Pilih Metode</h5>
+              <img src={Rect} alt="-" />
+              <div className="bg1">2</div>
+              <h5>Bayar</h5>
+              <img src={Rect} alt="-" />
+              <div className="bg1">3</div>
+              <h5>Tiket</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="detailpesanan">
         <div className="row row1">
           <div className="col-lg-12 col-md-12">
@@ -48,9 +79,41 @@ const Pembayaran = () => {
             <h2>Pilih Bank Transfer</h2>
             <p>Kamu Bisa Membayar Dengan Transfer Melalui ATM, Internet Banking, atau Mobile Banking</p>
             <ul>
-              <li>BCA Transfer</li>
-              <li>BNI Transfer</li>
-              <li>Mandiri Transfer</li>
+              <li
+                className={selected === 1 ? "active" : null}
+                onClick={() => {
+                  selectClick(1);
+                  localStorage.setItem("bank", "BCA");
+                }}
+              >
+                <h5>BCA</h5>
+                <p>BCA Transfer</p>
+                {selected === 1 ? <img src={Check} alt="check-list" /> : null}
+              </li>
+              <hr />
+              <li
+                className={selected === 1 ? "active" : null}
+                onClick={() => {
+                  selectClick(2);
+                  localStorage.setItem("bank", "BNI");
+                }}
+              >
+                <h5>BNI</h5>
+                <p>BNI Transfer</p>
+                {selected === 2 ? <img src={Check} alt="check-list" /> : null}
+              </li>
+              <hr />
+              <li
+                className={selected === 3 ? "active" : null}
+                onClick={() => {
+                  selectClick(3);
+                  localStorage.setItem("bank", "Mandiri");
+                }}
+              >
+                <h5>Mandiri</h5>
+                <p>Mandiri Transfer</p>
+                {selected === 3 ? <img src={Check} alt="check-list" /> : null}
+              </li>
             </ul>
           </div>
           <div className="col-lg-5 col-md-12 coll2">
@@ -117,7 +180,7 @@ const Pembayaran = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
