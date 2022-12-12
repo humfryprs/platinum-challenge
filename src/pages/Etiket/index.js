@@ -1,6 +1,7 @@
 import React, { useEffect, useState} from "react";
 import successIcon from "./success.svg";
 import Axios from "axios";
+import Nav_Step from "../../components/nav-step";
 // import download from "./fi_download.svg";
 
 // PDF
@@ -102,6 +103,7 @@ const E_Tiket = () => {
 
   return (
     <div className="e_tiket">
+      <Nav_Step/>
       <div className="container">
         <div className="row">
           <div className="col-12 status">

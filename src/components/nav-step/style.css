@@ -1,0 +1,46 @@
+.desc {
+	background: #f1f3ff;
+	height: 200px;
+	padding-top: 50px;
+}
+
+.desc .row {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 50px;
+}
+
+.row .desc1 {
+	display: flex;
+	padding: 0 5px;
+	align-items: center;
+}
+
+.row .desc1 a img {
+	width: 24px;
+	height: auto;
+	margin-right: 16px;
+}
+
+.row .desc1 h1 {
+	font-family: Arial;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 20px;
+	letter-spacing: 0em;
+	text-align: left;
+	margin-bottom: 0;
+}
+
+.row .desc1 .bg1 img {
+	width: 14px;
+	height: auto;
+	margin-right: 8px;
+	margin-left: 12px;
+}
+
+.row .desc1 h5 {
+	margin-bottom: 0;
+	margin-right: 12px;
+	white-space: nowrap;
+}
