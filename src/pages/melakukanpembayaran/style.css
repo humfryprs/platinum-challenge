@@ -1,3 +1,45 @@
+.pembayaran .desc {
+  background: #f1f3ff;
+  height: 200px;
+  padding-top: 50px;
+}
+.pembayaran .desc .row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.pembayaran .row .desc1 {
+  display: flex;
+  padding: 0 5px;
+  align-items: center;
+}
+
+.pembayaran .row .desc1 a img{
+  width: 24px;
+  height:auto;
+  margin-right: 16px;
+}
+
+.pembayaran .row .desc1 h1 {
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 0;
+}
+.pembayaran .row .desc1 .bg1 img {
+  width: 14px;
+  height: auto;
+  margin-right: 8px;
+  margin-left: 12px;
+}
+.pembayaran .row .desc1 h5 {
+  margin-bottom: 0;
+  margin-right: 12px;
+  white-space: nowrap;
+}
 .detailpesanan {
   margin: 0 100px;
 
@@ -44,14 +86,26 @@
   padding: 20px;
   text-align: start;
 }
+
 .detailpesanan2 .coll1 li {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.detailpesanan2 .coll1 li h5 {
+  border: 1px solid #d0d0d0;
+  padding: 5px;
+}
+.detailpesanan2 .coll1 li p {
   font-family: Arial;
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
   letter-spacing: 0em;
   text-align: left;
+  cursor: pointer;
 }
+
 .detailpesanan2.coll1 h2 {
   font-family: Arial;
   font-size: 14px;

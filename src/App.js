@@ -28,6 +28,7 @@ import Detail from "./pages/detail";
 
 import Footer from "./components/footer";
 import Etiket from "./pages/Etiket";
+
 import Pembayaran from "./pages/melakukanpembayaran";
 
 const App = () => {

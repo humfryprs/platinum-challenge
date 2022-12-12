@@ -8,15 +8,14 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 // import { createRoot } from "react-dom/client";
 // import {queryData} from "../../helper";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Detail = () => {
   //Calendar
   const [dateRange, setDateRange] = useState([null, null]);
   const [startDate, endDate] = dateRange;
   const [detail, setDetail] = useState({});
-  // console.log(startDate)
-  // console.log(new Date(startDate).toISOString());
+  const navigate = useNavigate();
 
   // const [value, onChange] = useState(new Date());
   let { productId } = useParams();
@@ -44,50 +43,88 @@ const Detail = () => {
       day = ("0" + date.getDate()).slice(-2);
     return [date.getFullYear(), month, day].join("-");
   }
-
-  console.log(convert(startDate));
-
-  const saveDate = () => {
-    console.log("ok");
+  
+  const saveDate = async (e) => {
+    // console.log("ok");
 
     //axios
 
-    
-    const params = JSON.stringify({
-          //content here
-          start_rent_at: convert(startDate.current.value),
-          finish_rent_at: convert(endDate.current.value),
-          car_id: productId.current.value
-        })
-    
+    e.preventDefault();
+    const params = {
+      //content here
+      start_rent_at: convert(startDate),
+      finish_rent_at: convert(endDate),
+      car_id: parseInt(productId),
+    };
 
-    Axios.post(
+    const headers = {
+      "Content-Type": "application/json",
+      access_token:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImN1c3RvbWVyQGJjci5pbyIsInJvbGUiOiJDdXN0b21lciIsImlhdCI6MTY3MDc0NzM5MH0._6opOlcCEw-NZsVPkclAA1-NqdV_bEEncLMekVdXasw",
+    };
+
+    await Axios.post(
       `https://bootcamp-rent-cars.herokuapp.com/customer/order`,
-      params
+      params,
+      {
+        headers: headers,
+      }
     )
-      .then(function (response) {
+      .then(function () {
         // Handle success
-        console.log(response);
+        navigate("/payment");
       })
       .catch(function (error) {
         // Handle error
         console.log(error);
       });
 
-    // const options = {
-    //   method: "POST",
-    //   headers: {
-    //     Accept: "application/json",
-    //     "Content-Type": "application/json;charset=UTF-8",
-    //     "access_token":
-    //       "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGJjci5pbyIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTY3MDY1NDQ2Mn0.9egUeHoAazkcjf5AZiQ01HIh74KK0hCk7ywItOWjC-Q",
+
+    // const config = {
+    //   auth: {
+    //     type: "apikey",
+    //     apikey: [
+    //       {
+    //         key: "value",
+    //         value:
+    //           "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImN1c3RvbWVyQGJjci5pbyIsInJvbGUiOiJDdXN0b21lciIsImlhdCI6MTY3MDc0NzM5MH0._6opOlcCEw-NZsVPkclAA1-NqdV_bEEncLMekVdXasw",
+    //         type: "string",
+    //       },
+    //       {
+    //         key: "key",
+    //         value: "access_token",
+    //         type: "string",
+    //       },
+    //       {
+    //         key: "in",
+    //         value: "header",
+    //         type: "string",
+    //       },
+    //     ],
     //   },
-    //   body: JSON.stringify({
+    //   method: "POST",
+    //   url: "https://bootcamp-rent-cars.herokuapp.com/customer/order",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   data: JSON.stringify({
     //     start_rent_at: convert(startDate.current.value),
     //     finish_rent_at: convert(endDate.current.value),
     //     car_id: productId.current.value,
     //   }),
     // };
+
+    // console.log(config.data);
+
+    // Axios(config)
+    // .then(function (response) {
+    //     // Handle success
+    //     console.log(response);
+    //   })
+    //   .catch(function (error) {
+    //     // Handle error
+    //     console.log(error);
+    //   });
 
     //fetch
 
@@ -183,14 +220,7 @@ const Detail = () => {
                 <p>Total</p>
                 <p>{detail.price}</p>
               </div>
-              {/* <button type="submit">Submit</button> */}
-              <Link
-                className="btn btn-success"
-                type="submit"
-                to={`/payment`}
-              >
-                Pilih Mobil
-              </Link>
+              <button type="submit" className="btn btn-success">Submit</button>
             </form>
           </div>
         </div>
