@@ -10,7 +10,7 @@ import icon3_blue from "../../assets/icons/Group 15-blue.svg";
 import checklist from "../../assets/icons/Check-blue.svg";
 import "./style.css";
 
-const Nav_Step = () => {
+const Nav_Step = (dataNavTop) => {
   let no1, no2, no3;
   let getUrl = window.location.pathname.split("/").pop();
   if (getUrl === "pembayaran") {
@@ -26,6 +26,7 @@ const Nav_Step = () => {
     no2 = checklist;
     no3 = icon3_blue;
   }
+
   return (
     <div className="desc">
       <div className="container">
@@ -51,6 +52,14 @@ const Nav_Step = () => {
               <img src={no3} alt="" />
             </div>
             <h5>Tiket</h5>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-12">
+            <span>
+              <p>Order ID:</p>
+              <p>{dataNavTop.orderId}</p>
+            </span>
           </div>
         </div>
       </div>
