@@ -20,7 +20,7 @@
 // export default App;
 
 import React from "react";
-import { Routes, Route, useLocation, Outlet, Navigate } from "react-router-dom";
+import { Routes, Route, Outlet, useLocation, Navigate } from "react-router-dom";
 import Header from "./components/header";
 import Homepage from "./pages/homepage";
 import Cari_Mobil from "./pages/cari-mobil";
@@ -30,8 +30,8 @@ import Footer from "./components/footer";
 import Etiket from "./pages/Etiket";
 
 import Pembayaran from "./pages/melakukanpembayaran";
-import Signup from "./pages/signup/";
-import Signin from "./pages/signin/";
+import Signup from "./pages/signup";
+import Signin from "./pages/signin";
 
 const WithAuth = () => {
   const isAuth = window.localStorage.getItem("access_token");
@@ -45,18 +45,17 @@ const WithAuth = () => {
 
 const App = () => {
   const location = useLocation();
-
   return (
     <div className="App">
       {location.pathname !== "/sign-in" && location.pathname !== "/sign-up" && <Header />}
 
       <Routes>
-        {/ Public /}
+        {/* {/ Public /} */}
         <Route path="/sign-up" element={<Signup />} />
         <Route path="/sign-in" element={<Signin />} />
         <Route path="/" element={<Homepage />} />
 
-        {/ WithAuth /}
+        {/* {/ WithAuth /} */}
         <Route element={<WithAuth />}>
           <Route path="/cari-mobil" element={<Cari_Mobil />} />
           <Route path="/cari-mobil/:productId" element={<Detail />} />

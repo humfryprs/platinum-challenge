@@ -1,9 +1,9 @@
 import { useState, React } from "react";
 import "./style.css";
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
-import Loginkanan from "../../assets/images/login.png";
-import Logologin from "../../assets/images/logologin.png";
-import Closelogo from "../../assets/images/close.png";
+import Loginkanan from "../../assets/images/login.svg";
+import Logologin from "../../assets/images/logo.svg";
+import Closelogo from "../../assets/images/close.svg";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
@@ -18,7 +18,7 @@ const Signin = () => {
       .post("https://bootcamp-rent-cars.herokuapp.com/customer/auth/login", { email, password })
       .then((res) => {
         window.localStorage.setItem("access_token", res.data.access_token);
-        window.location.href = "/find-car";
+        window.location.href = "/cari-mobil";
       })
       .catch((e) => console.log(e));
   };

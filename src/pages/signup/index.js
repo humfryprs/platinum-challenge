@@ -1,12 +1,29 @@
-import React from "react";
+import { useState, React } from "react";
 import "./style.scss";
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
-import Signupkanan from "../../assets/images/login.png";
-import Logoregister from "../../assets/images/logologin.png";
-import Closelogo from "../../assets/images/close.png";
+import Signupkanan from "../../assets/images/login.svg";
+import Logoregister from "../../assets/images/logo.svg";
+import Closelogo from "../../assets/images/close.svg";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const Signup = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    axios
+      .post("https://bootcamp-rent-cars.herokuapp.com/customer/auth/register", { name, email, password })
+      .then((res) => {
+        window.localStorage.setItem("access_token", res.data.access_token);
+        window.location.href = "/";
+      })
+      .catch((e) => console.log(e));
+  };
+
   return (
     <div className="signup">
       <Container fluid>
@@ -21,16 +38,16 @@ const Signup = () => {
                   <img src={Closelogo} alt="close" className="closelogo" />
                 </div>
                 <h1>Sign Up</h1>
-                <Form>
+                <Form onSubmit={handleSubmit}>
                   <Form.Group className="mb-3 email" controlId="formBasicEmail">
                     <Form.Label>
                       <h3>Name</h3>
                     </Form.Label>
-                    <Form.Control type="text" placeholder="Nama Lengkap" className="namaform" />
+                    <Form.Control type="text" placeholder="Nama Lengkap" className="namaform" onChange={(e) => setName(e.target.value)} />
                     <Form.Label>
                       <h3>Email</h3>
                     </Form.Label>
-                    <Form.Control type="email" placeholder="Contoh: johndee@gmail.com" />
+                    <Form.Control type="email" placeholder="Contoh: johndee@gmail.com" onChange={(e) => setEmail(e.target.value)} />
                     {/* <Form.Text className="text-muted">
                             We'll........... nev,,,,,,,er share your email with anyone else.
                             </Form.Text> */}
@@ -39,7 +56,7 @@ const Signup = () => {
                     <Form.Label>
                       <h3>Password</h3>
                     </Form.Label>
-                    <Form.Control type="password" placeholder="6+ karakter  " />
+                    <Form.Control type="password" placeholder="6+ karakter  " onChange={(e) => setPassword(e.target.value)} />
                   </Form.Group>
                   <div className="d-grid gap-2">
                     <Button variant="primary" type="submit" size="lg">
