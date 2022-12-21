@@ -2,8 +2,8 @@ import { useState, React } from "react";
 import "./style.css";
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
 import Loginkanan from "../../assets/images/login.svg";
-import Logologin from "../../assets/images/logo.svg";
-import Closelogo from "../../assets/images/close.svg";
+import Logologin from "../../assets/images/logo.png";
+
 import { Link } from "react-router-dom";
 import axios from "axios";
 
@@ -27,14 +27,13 @@ const Signin = () => {
     <div className="login">
       <Container fluid>
         <Row>
-          <Col className="login-kiri" sm={12} lg={6} xl={6}>
-            <div className="login-box">
-              <div className="login-konten">
-                <div className="logo-login">
+          <Col className="loginleft" sm={12} lg={6} xl={6}>
+            <div className="loginbox">
+              <div className="loginkonten">
+                <div className="logologin">
                   <a href="/">
                     <img src={Logologin} alt="BCR" className="homelogo" />
                   </a>
-                  <img src={Closelogo} alt="close" className="closelogo" />
                 </div>
                 <h1>Welcome Back! </h1>
                 <Form onSubmit={handleSubmit}>
@@ -70,7 +69,7 @@ const Signin = () => {
               </div>
             </div>
           </Col>
-          <Col className="login-kanan" sm={0} lg={6} xl={6}>
+          <Col className="loginright" sm={0} lg={6} xl={6}>
             <img src={Loginkanan} alt="Login" title="loginpage" />
           </Col>
         </Row>

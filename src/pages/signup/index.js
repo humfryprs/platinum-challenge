@@ -28,10 +28,10 @@ const Signup = () => {
     <div className="signup">
       <Container fluid>
         <Row>
-          <Col className="signup-kiri" sm={12} lg={6} xl={6}>
-            <div className="signup-box">
-              <div className="signup-konten">
-                <div className="logo-signup">
+          <Col className="signupleft" sm={12} lg={6} xl={6}>
+            <div className="signupbox">
+              <div className="signupkonten">
+                <div className="logosignup">
                   <a href="/">
                     <img src={Logoregister} alt="BCR" className="homelogo" />
                   </a>
@@ -75,7 +75,7 @@ const Signup = () => {
               </div>
             </div>
           </Col>
-          <Col className="signup-kanan" sm={0} lg={6} xl={6}>
+          <Col className="signupright" sm={0} lg={6} xl={6}>
             <img src={Signupkanan} alt="signup" title="registerpage" />
           </Col>
         </Row>
