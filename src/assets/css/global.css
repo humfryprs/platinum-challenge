@@ -1,4 +1,4 @@
-body{
+body {
   padding-top: 104px;
 }
 
@@ -59,11 +59,11 @@ p {
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
-  color: #FFFFFF;
-  background: #5CB85F;
+  color: #ffffff;
+  background: #5cb85f;
   border-radius: 2px;
   padding: 8px 12px;
-  border-color: #5CB85F;
+  border-color: #5cb85f;
   height: 36px;
   width: auto;
 }

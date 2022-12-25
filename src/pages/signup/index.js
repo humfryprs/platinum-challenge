@@ -10,16 +10,16 @@ import axios from "axios";
 const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [name, setName] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     axios
-      .post("https://bootcamp-rent-cars.herokuapp.com/customer/auth/register", { name, email, password })
+      .post("https://bootcamp-rent-cars.herokuapp.com/customer/auth/register", { role: "Admin", email, password })
       .then((res) => {
-        window.localStorage.setItem("access_token", res.data.access_token);
-        window.location.href = "/";
+        // window.localStorage.setItem("access_token", res.data.access_token);
+        // window.location.href = "/";
+        console.log(res);
       })
       .catch((e) => console.log(e));
   };
@@ -43,7 +43,7 @@ const Signup = () => {
                     <Form.Label>
                       <h3>Name</h3>
                     </Form.Label>
-                    <Form.Control type="text" placeholder="Nama Lengkap" className="namaform" onChange={(e) => setName(e.target.value)} />
+                    <Form.Control type="text" placeholder="Nama Lengkap" className="namaform" />
                     <Form.Label>
                       <h3>Email</h3>
                     </Form.Label>
