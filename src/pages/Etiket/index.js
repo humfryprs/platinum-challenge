@@ -1,7 +1,8 @@
-import React, { useEffect, useState} from "react";
+import React, { useEffect, useState, useRef} from "react";
 import successIcon from "./success.svg";
 import Axios from "axios";
 import Nav_Step from "../../components/nav-step";
+import { queryData} from "../../helper";
 // import download from "./fi_download.svg";
 
 // PDF
@@ -78,32 +79,50 @@ const E_Tiket = () => {
   });
 
   const [detail, setDetail] = useState({});
-  let orderId  = 3
 
   const baseUrl = "https://bootcamp-rent-cars.herokuapp.com";
 
-  const getSlip = (orderId) => {
-    Axios.get(`${baseUrl}/customer/v2/order/${orderId}`)
+  // const orderId = useRef("");
+
+  const orderId = 3;
+
+    const params = {
+      id: orderId
+    };
+
+    const headers = {
+      "Content-Type": "application/json",
+      access_token:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImN1c3RvbWVyQGJjci5pbyIsInJvbGUiOiJDdXN0b21lciIsImlhdCI6MTY3MDc0NzM5MH0._6opOlcCEw-NZsVPkclAA1-NqdV_bEEncLMekVdXasw",
+    };
+
+    Axios.get(`${baseUrl}/customer/order/${queryData(params)}`, {
+      headers: headers,
+    })
       .then((response) => {
         setDetail(response.data);
-        console.log(response.data)
+        console.log(response.data);
       })
       .catch((error) =>
         // handle error
         console.log(error)
       );
-  };
+  
 
-  useEffect(() => {
-    if (fetch.current) {
-      fetch.current = false;
-      getSlip(orderId);
-    }
-  }, [orderId]);
+  // useEffect(() => {
+  //   if (fetch.current) {
+  //     fetch.current = false;
+  //     getSlip(orderId);
+  //   }
+  // }, [orderId]);
+
+  const dataNavTop ={
+    orderId
+  };
 
   return (
     <div className="e_tiket">
-      <Nav_Step/>
+      <Nav_Step {...dataNavTop}/>
       <div className="container">
         <div className="row">
           <div className="col-12 status">
@@ -159,13 +178,7 @@ const E_Tiket = () => {
                         <View style={styles.body}>
                           <View style={styles.row}>
                             <Text style={styles.text}>
-                              Lorem ipsum dolor sit amet, consectetur
-                              adipisicing elit, sed do eiusmod tempor incididunt
-                              ut labore et dolore magna aliqua. Ut enim ad minim
-                              veniam, quis nostrud exercitation ullamco laboris
-                              nisi ut aliquip ex ea commodo consequat. Duis aute
-                              irure dolor in reprehenderit in voluptate velit
-                              esse cillum.
+                              {detail.slip}
                             </Text>
                             <View style={styles.fill1} />
                           </View>
