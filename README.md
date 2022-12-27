@@ -77,3 +77,13 @@ npm install -g json-server
 
 Run server 
 json-server --watch -p 4000 db.json
+
+Iqbal
+1. pembayaran 01-05
+2. Signin & signup
+
+Humfrey
+1. Dashboard
+2. Etiket
+3. Detail artikel
+

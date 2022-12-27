@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef} from "react";
+import React, { useState} from "react";
 import successIcon from "./success.svg";
 import Axios from "axios";
 import Nav_Step from "../../components/nav-step";

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import ArrowLeft from "./assets/arrow-left.svg";
-import Rect from "./assets/rect.svg";
+// import ArrowLeft from "./assets/arrow-left.svg";
+// import Rect from "./assets/rect.svg";
 import Copy from "./assets/copy.svg";
 import Upload from "./assets/upload.png";
 import "./style.css";
@@ -96,33 +96,6 @@ const Payment2 = () => {
       {dataBank.map((data, key) => {
         return (
           <div className="container" key={key}>
-            <div className="payment-nav">
-              <div className="container">
-                <div className="row">
-                  <div className="col-md-4">
-                    <div className="back-button">
-                      <Link to={-1}>
-                        <img src={ArrowLeft} alt="back to detail mobil" />
-                      </Link>
-                      <h3>{data.desc}</h3>
-                    </div>
-                    <h4>Order ID: 86754231</h4>
-                  </div>
-                  <div className="col-md-8">
-                    <div className="state-payment">
-                      <div className="one">1</div>
-                      <h5>Pilih Metode</h5>
-                      <img src={Rect} alt="-" />
-                      <div className="two">2</div>
-                      <h5>Bayar</h5>
-                      <img src={Rect} alt="-" />
-                      <div className="three">3</div>
-                      <h5>Tiket</h5>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
             <div className="bank-detail">
               <div className="container">
                 <div className="row">

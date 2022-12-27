@@ -1,12 +1,8 @@
 import React, { useState } from "react";
 import logo1 from "../../assets/images/fi_users.jpg";
-import ArrowLeft from "../../assets/images/arrow-left.svg";
-import Rect from "../../assets/images/rect.svg";
 import { Link } from "react-router-dom";
 import Check from "../../assets/images/check.svg";
-import icon1 from "../../assets/icons/Group 13.svg";
-import icon2 from "../../assets/icons/Group 14.svg";
-import icon3 from "../../assets/icons/Group 15.svg";
+import Nav_Step from "../../components/nav-step";
 
 import "./style.css";
 
@@ -15,36 +11,16 @@ const Pembayaran = () => {
   const selectClick = (index) => {
     setSelected(index);
   };
+
+  const orderId = 3;
+
+  const dataNavTop = {
+    orderId,
+  };
+
   return (
     <section className="pembayaran">
-      <div className="desc">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-3 desc1">
-              <Link to={-1}>
-                <img src={ArrowLeft} alt="back to detail mobil" />
-              </Link>
-              <h1>Pembayaran</h1>
-            </div>
-            <div className="col-lg-3 desc1">
-              <div className="bg1">
-                <img src={icon1} alt="" />
-              </div>
-              <h5>Pilih Metode</h5>
-              <img src={Rect} alt="-" />
-              <div className="bg1">
-                <img src={icon2} alt="" />
-              </div>
-              <h5>Bayar</h5>
-              <img src={Rect} alt="-" />
-              <div className="bg1">
-                <img src={icon3} alt="" />
-              </div>
-              <h5>Tiket</h5>
-            </div>
-          </div>
-        </div>
-      </div>
+        <Nav_Step {...dataNavTop} />
 
       <div className="detailpesanan">
         <div className="row row1">
@@ -188,7 +164,11 @@ const Pembayaran = () => {
                 <h2>Rp 3.500.000</h2>
               </div>
             </div>
-            <Link className="btn btn-success" type="submit" to={`/e-tiket`}>
+            <Link
+              className="btn btn-success"
+              type="submit"
+              to={`/bank-payment`}
+            >
               Pembayaran
             </Link>
           </div>

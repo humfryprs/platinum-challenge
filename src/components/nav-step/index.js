@@ -13,11 +13,11 @@ import "./style.css";
 const Nav_Step = (dataNavTop) => {
   let no1, no2, no3;
   let getUrl = window.location.pathname.split("/").pop();
-  if (getUrl === "pembayaran") {
+  if (getUrl === "payment") {
     no1 = icon1_blue;
     no2 = icon2;
     no3 = icon3;
-  } else if (getUrl === "asd") {
+  } else if (getUrl === "bank-payment") {
     no1 = checklist;
     no2 = icon2_blue;
     no3 = icon3;

@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import "./style.scss";
 import "../../assets/css/bootstrap.css";
 import Accordion from "../../../node_modules/react-bootstrap/Accordion";
-import DatePicker from "../../../node_modules/react-datepicker";
+import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 // import { createRoot } from "react-dom/client";
 // import {queryData} from "../../helper";
