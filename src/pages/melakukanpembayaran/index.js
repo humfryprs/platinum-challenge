@@ -4,6 +4,9 @@ import ArrowLeft from "../../assets/images/arrow-left.svg";
 import Rect from "../../assets/images/rect.svg";
 import { Link } from "react-router-dom";
 import Check from "../../assets/images/check.svg";
+import icon1 from "../../assets/icons/Group 13.svg";
+import icon2 from "../../assets/icons/Group 14.svg";
+import icon3 from "../../assets/icons/Group 15.svg";
 
 import "./style.css";
 
@@ -24,13 +27,19 @@ const Pembayaran = () => {
               <h1>Pembayaran</h1>
             </div>
             <div className="col-lg-3 desc1">
-              <div className="bg1">1</div>
+              <div className="bg1">
+                <img src={icon1} alt="" />
+              </div>
               <h5>Pilih Metode</h5>
               <img src={Rect} alt="-" />
-              <div className="bg1">2</div>
+              <div className="bg1">
+                <img src={icon2} alt="" />
+              </div>
               <h5>Bayar</h5>
               <img src={Rect} alt="-" />
-              <div className="bg1">3</div>
+              <div className="bg1">
+                <img src={icon3} alt="" />
+              </div>
               <h5>Tiket</h5>
             </div>
           </div>
@@ -77,7 +86,10 @@ const Pembayaran = () => {
         <div className="row row3">
           <div className="col-lg-7 col-md-12 coll1">
             <h2>Pilih Bank Transfer</h2>
-            <p>Kamu Bisa Membayar Dengan Transfer Melalui ATM, Internet Banking, atau Mobile Banking</p>
+            <p>
+              Kamu Bisa Membayar Dengan Transfer Melalui ATM, Internet Banking,
+              atau Mobile Banking
+            </p>
             <ul>
               <li
                 className={selected === 1 ? "active" : null}
@@ -176,7 +188,9 @@ const Pembayaran = () => {
                 <h2>Rp 3.500.000</h2>
               </div>
             </div>
-            <button className="btn btn-success button ">Lanjutkan Pembayaran</button>
+            <Link className="btn btn-success" type="submit" to={`/e-tiket`}>
+              Pembayaran
+            </Link>
           </div>
         </div>
       </div>

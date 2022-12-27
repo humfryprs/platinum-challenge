@@ -1,0 +1,50 @@
+.detail .row {
+  align-items: flex-start !important;
+}
+.detail li {
+  list-style: circle;
+}
+.detail img {
+  width: 100%;
+  height: auto;
+}
+.detail .col-5, .detail .col {
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+}
+.detail .col {
+  margin-right: 16px;
+}
+.detail .col-5 {
+  margin-left: 16px;
+}
+.detail .btn {
+  background: #5cb85f;
+  border-radius: 2px;
+  border: none;
+  width: 100%;
+}
+.detail .image {
+  padding: 24px 68px 0px 68px;
+}
+.detail .accordion-button {
+  border: none;
+  margin: 0px;
+  padding: 16px 16px 16px 0px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 0em;
+}
+.detail .total {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+.detail .total p {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+}/*# sourceMappingURL=style.css.map */

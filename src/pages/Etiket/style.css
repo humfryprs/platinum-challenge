@@ -1,37 +1,46 @@
-.kartu{
-    width: 605px;
-    margin: auto;
-    margin-bottom: 50px;
+.e_tiket .invoice-detail {
+  padding: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
 }
-.detail-pembayaran{
-    text-align:  center;
-    margin-top: 40px;
+.e_tiket .status {
+  text-align: center;
 }
-.card .kotak-pembayaran{
-     padding: 30px;
+.e_tiket .status img {
+  height: 48px;
+  width: auto;
+  margin-bottom: 16px;
 }
-.detail-pembayaran img{
-    margin-bottom: 20px;
-    /* padding: 30px; */
+.e_tiket .status h2 {
+  margin-bottom: 16px;
 }
-.detail-pembayaran h3{
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 20px;
-    text-align: center;
-    margin-bottom: 20px;
+.e_tiket .status p {
+  margin-bottom: 16px;
 }
-.detail-pembayaran p{
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    margin-bottom: 50px;
+.e_tiket .card {
+  border: none;
 }
-.kotak-pembayaran .above{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+.e_tiket .card .col-4 {
+  justify-content: end;
+  position: relative;
 }
-/* .Rectangle{
-    width: 100%;
-} */
+.e_tiket .button {
+  align-content: center;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0em;
+  color: #0D28A6;
+  background: linear-gradient(0deg, #FFFFFF, #FFFFFF);
+  border: 1px solid #0D28A6;
+  position: absolute;
+  right: 12px;
+}
+.e_tiket .button img {
+  width: 18px;
+  height: auto;
+  margin-right: 10px;
+}
+.e_tiket .invoice-view .col-12 {
+  padding: 0;
+}/*# sourceMappingURL=style.css.map */

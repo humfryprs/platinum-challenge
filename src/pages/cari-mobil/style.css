@@ -1,0 +1,47 @@
+.cari-mobil {
+  margin-top: 70px;
+  position: relative;
+  z-index: 1;
+}
+.cari-mobil .bars-loading {
+  justify-content: center;
+  padding: 60px 0 0;
+}
+.cari-mobil .row {
+  align-items: flex-start;
+  justify-content: center;
+}
+.cari-mobil .col-lg-4 {
+  padding: 12px;
+}
+.cari-mobil .card {
+  padding: 15px;
+  height: 100%;
+}
+.cari-mobil .card-wrapper {
+  margin-bottom: 30px;
+}
+.cari-mobil .price {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 8px;
+}
+.cari-mobil .description {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 24px;
+}
+.cari-mobil img {
+  width: 100%;
+}
+.cari-mobil .btn {
+  background: #5cb85f;
+  border-radius: 2px;
+  border: none;
+}/*# sourceMappingURL=style.css.map */
