@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import "./style.scss";
 import "../../assets/css/bootstrap.css";
 import Accordion from "../../../node_modules/react-bootstrap/Accordion";
-import DatePicker from "react-datepicker";
+import DatePicker from "../../../node_modules/react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 // import { createRoot } from "react-dom/client";
 // import {queryData} from "../../helper";
@@ -43,7 +43,7 @@ const Detail = () => {
       day = ("0" + date.getDate()).slice(-2);
     return [date.getFullYear(), month, day].join("-");
   }
-  
+
   const saveDate = async (e) => {
     // console.log("ok");
 
@@ -59,17 +59,12 @@ const Detail = () => {
 
     const headers = {
       "Content-Type": "application/json",
-      access_token:
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImN1c3RvbWVyQGJjci5pbyIsInJvbGUiOiJDdXN0b21lciIsImlhdCI6MTY3MDc0NzM5MH0._6opOlcCEw-NZsVPkclAA1-NqdV_bEEncLMekVdXasw",
+      access_token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImN1c3RvbWVyQGJjci5pbyIsInJvbGUiOiJDdXN0b21lciIsImlhdCI6MTY3MDc0NzM5MH0._6opOlcCEw-NZsVPkclAA1-NqdV_bEEncLMekVdXasw",
     };
 
-    await Axios.post(
-      `https://bootcamp-rent-cars.herokuapp.com/customer/order`,
-      params,
-      {
-        headers: headers,
-      }
-    )
+    await Axios.post(`https://bootcamp-rent-cars.herokuapp.com/customer/order`, params, {
+      headers: headers,
+    })
       .then(function () {
         // Handle success
         navigate("/payment");
@@ -78,7 +73,6 @@ const Detail = () => {
         // Handle error
         console.log(error);
       });
-
 
     // const config = {
     //   auth: {
@@ -163,32 +157,24 @@ const Detail = () => {
             <h2>Tentang Paket</h2>
             <h2>Include</h2>
             <ul>
-              <li>
-                Apa saja yang termasuk dalam paket misal durasi max 12 jam
-              </li>
+              <li>Apa saja yang termasuk dalam paket misal durasi max 12 jam</li>
               <li>Sudah termasuk bensin selama 12 jam </li>
               <li>Sudah termasuk Tiket Wisata</li>
               <li>Sudah termasuk pajak</li>
             </ul>
             <h2>Include</h2>
             <ul>
-              <li>
-                Apa saja yang termasuk dalam paket misal durasi max 12 jam
-              </li>
+              <li>Apa saja yang termasuk dalam paket misal durasi max 12 jam</li>
               <li>Sudah termasuk bensin selama 12 jam </li>
               <li>Sudah termasuk Tiket Wisata</li>
               <li>Sudah termasuk pajak</li>
             </ul>
             <Accordion>
               <Accordion.Item eventKey="0">
-                <Accordion.Header>
-                  Refund, Reschedule, Overtime
-                </Accordion.Header>
+                <Accordion.Header>Refund, Reschedule, Overtime</Accordion.Header>
                 <Accordion.Body>
                   <ul>
-                    <li>
-                      Apa saja yang termasuk dalam paket misal durasi max 12 jam
-                    </li>
+                    <li>Apa saja yang termasuk dalam paket misal durasi max 12 jam</li>
                     <li>Sudah termasuk bensin selama 12 jam </li>
                     <li>Sudah termasuk Tiket Wisata</li>
                     <li>Sudah termasuk pajak</li>
@@ -220,7 +206,9 @@ const Detail = () => {
                 <p>Total</p>
                 <p>{detail.price}</p>
               </div>
-              <button type="submit" className="btn btn-success">Submit</button>
+              <button type="submit" className="btn btn-success">
+                Submit
+              </button>
             </form>
           </div>
         </div>

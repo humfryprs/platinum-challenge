@@ -32,6 +32,7 @@ import Etiket from "./pages/Etiket";
 import Pembayaran from "./pages/melakukanpembayaran";
 import Signup from "./pages/signup";
 import Signin from "./pages/signin";
+import Payment2 from "./pages/melakukanpembayaran2";
 
 const WithAuth = () => {
   const isAuth = window.localStorage.getItem("access_token");
@@ -61,6 +62,7 @@ const App = () => {
           <Route path="/cari-mobil/:productId" element={<Detail />} />
           <Route path="/e-tiket" element={<Etiket />} />
           <Route path="/payment" element={<Pembayaran />} />
+          <Route path="/bank-payment" element={<Payment2 />} />
         </Route>
       </Routes>
 
