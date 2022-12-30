@@ -33,9 +33,11 @@ import Pembayaran from "./pages/melakukanpembayaran";
 import Signup from "./pages/signup";
 import Signin from "./pages/signin";
 import Payment2 from "./pages/melakukanpembayaran2";
+
+import Dashboard from "./pages/dashboard";
+
 import CMSsignin from "./pages/cms-signin";
 import E_Tiket from "./pages/Etiket";
-// import Dashboard from "./pages/dashboard";
 
 const WithAuth = () => {
   const isAuth = window.localStorage.getItem("access_token");
@@ -51,15 +53,18 @@ const App = () => {
   const location = useLocation();
   return (
     <div className="App">
-      {location.pathname !== "/sign-in" && location.pathname !== "/sign-up" && <Header />}
+
+      {location.pathname !== "/sign-in" &&
+        location.pathname !== "/sign-up" &&
+        location.pathname !== "/dashboard" && <Header />}
 
       <Routes>
         {/* {/ Public /} */}
         <Route path="/sign-up" element={<Signup />} />
         <Route path="/sign-in" element={<Signin />} />
         <Route path="/" element={<Homepage />} />
+        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/cms-signin" element={<CMSsignin />} />
-        {/* <Route path="/dashboard" element={<Dashboard />} /> */}
 
         {/* {/ WithAuth /} */}
         <Route element={<WithAuth />}>
@@ -72,7 +77,11 @@ const App = () => {
         </Route>
       </Routes>
 
-      {location.pathname !== "/sign-in" && location.pathname !== "/sign-up" && <Footer />}
+
+      {location.pathname !== "/sign-in" &&
+        location.pathname !== "/sign-up" &&
+        location.pathname !== "/dashboard" &&
+        location.pathname !== "/dashboard" && (<Footer />)}
     </div>
   );
 };

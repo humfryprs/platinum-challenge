@@ -1,107 +1,51 @@
-// .header {
-//   padding: 25px 0 25px 0;
-//   position: fixed;
-//   top: 0;
-//   width: 100%;
-//   background-color: white;
-//   z-index: 1;
-// }
-
-.logo {
-  width: 151px;
-  display: flex;
-  align-items: center;
-}
-
-.menu {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  margin: 0px;
-  a {
-    margin: 8px 16px 8px 16px;
-    display: block;
-    text-decoration: none;
-    color: black;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-  }
-
-  .button {
-    color: #ffffff;
-  }
-}
-
-.burger-icon {
-  display: none;
-}
-
-.top-sidebar {
-  display: none;
-}
-
-.sidebar {
-  flex: 1;
-}
-
-.menu {
-  /* display: none; */
-  padding: 16px;
-}
-
-.burger-icon {
-  display: flex;
-  flex: 1;
-  justify-content: flex-end;
-}
-
-.sidebar {
+.left-sidebar {
   position: absolute;
-  background: #ffffff;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
-  width: 180px;
+  left: 0;
   top: 0;
-  right: -180px;
-  padding: 0;
+  background-color: #0d28a6;
+  display: flex;
+  flex-direction: column;
+  width: 70px;
   height: 100vh;
-  transition: 0.3s;
-  .menu-active {
-    right: 0;
-  }
-  .menu-active ::before {
-    content: "";
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.1);
-    z-index: -1;
-  }
-  .menu {
-    flex-direction: column;
-    align-items: flex-start;
-    a {
-      margin-left: 0px;
+  .left-burger-icon {
+    img {
+      width: 34px;
+      height: auto;
+      background-color: white;
+      margin: 18px;
     }
   }
-}
-
-.logo {
-  z-index: -1;
-}
-
-.top-sidebar {
-  display: flex;
-  align-items: center;
-  margin: 32px 30px 0px 16px;
-  justify-content: space-between;
-  h5 {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 20px;
-    margin-bottom: 0px;
+  ul {
+    margin: 0px;
+    padding-left: 0px;
+    li {
+      a {
+        img {
+          width: 70px;
+          height: auto;
+        }
+      }
+    }
+  }
+  .expand-bar {
+    position: absolute;
+    top: 70px;
+    left: 70px;
+    padding-top: 35px;
+    height: calc(100vh - 70px);
+    width: 220px;
+    background-color: white;
+    box-shadow: 0px 0px 8px 0px #0000000D;
+    h3 {
+      margin-left: 24px;
+    }
+    p {
+      padding-left: 24px;
+      padding-top: 11px;
+      padding-bottom: 11px;
+      background-color: #cfd4ed;
+      width: 100%;
+      font-weight: bold;
+    }
   }
 }
