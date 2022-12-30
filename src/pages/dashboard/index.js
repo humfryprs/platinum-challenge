@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-// import CMS_Sidebar from "../../components/cms-sidebar";
+import CMS_Sidebar from "../../components/cms-sidebar";
+import CMS_Topbar from "../../components/cms-topbar";
 import { Bar } from "react-chartjs-2";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -32,8 +33,7 @@ const Dashboard = () => {
 
     const headers = {
       "Content-Type": "application/json",
-      Authorization:
-        "access_token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGJjci5pbyIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTY3MTU4NzkyMX0.ISh7PDXJrm2QW1l_OJWkl4NC1p0XKhoPMHSn-kMhEMQ",
+      Authorization: "access_token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGJjci5pbyIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTY3MTU4NzkyMX0.ISh7PDXJrm2QW1l_OJWkl4NC1p0XKhoPMHSn-kMhEMQ",
     };
 
     const params = {
@@ -41,13 +41,9 @@ const Dashboard = () => {
       until: endMonth,
     };
 
-    Axios.get(
-      `https://bootcamp-rent-cars.herokuapp.com/admin/order/reports`,
-      params,
-      {
-        headers: headers,
-      }
-    )
+    Axios.get(`https://bootcamp-rent-cars.herokuapp.com/admin/order/reports`, params, {
+      headers: headers,
+    })
       .then((response) => {
         setData(response.data);
         console.log(response.data);
@@ -77,14 +73,15 @@ const Dashboard = () => {
   };
 
   return (
-    <div>
-      {/* <CMS_Sidebar /> */}
+    <div className="dashboard">
+      <CMS_Topbar />
       <div className="container">
         <div className="row">
-          <div className="col-3">
-            
+
+          <div className="col-2">
+            <CMS_Sidebar />
           </div>
-          <div className="col-9">
+          <div className="col-10">
             <DatePicker
               selected={startDate}
               onChange={(date) => setStartDate(date)}

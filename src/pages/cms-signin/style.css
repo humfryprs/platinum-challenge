@@ -1,0 +1,130 @@
+.login {
+  width: 100%;
+  height: 100vh;
+  margin-top: -104px;
+  z-index: 0 !important;
+}
+
+.loginleft {
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center !important;
+  justify-content: center !important;
+  background-color: #ffffff;
+  margin-top: -700px;
+}
+
+.loginbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center !important;
+  flex: 1;
+  justify-content: flex-start !important;
+}
+
+.loginkonten {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.form-control {
+  color: black;
+  font-weight: 500;
+}
+
+.logologin a {
+  display: flex;
+  align-items: center;
+}
+.logologin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.loginkonten h3 {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: black;
+}
+
+.loginkonten h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  margin: 32px 0px;
+}
+
+.loginkonten .btn {
+  background: #0d28a6;
+  border-radius: 2px;
+}
+
+.loginkonten .mb-3 {
+  width: 350px;
+}
+
+.bawah-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.btn {
+  margin-top: 15px;
+}
+
+.bawah-button h3 {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.bawah-button h4 {
+  margin-left: 8px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+  text-decoration-line: underline;
+  color: #0d28a6;
+}
+
+.loginkonten h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+.loginright {
+  height: 100vmax;
+  padding: 0 !important;
+}
+
+.loginright img {
+  object-fit: cover;
+  width: 100%;
+}
+
+@media (max-width: 540px) {
+  .loginleft {
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    padding: 30px 16px;
+  }
+}

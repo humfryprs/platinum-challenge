@@ -1,42 +1,3 @@
-.bank-payment .bg {
-  height: 164px;
-  background: #f1f3ff;
-}
-
-.bank-payment .payment-nav {
-  width: 90%;
-  position: relative;
-  margin: auto;
-  margin-top: -56px;
-}
-
-.bank-payment .payment-nav .back-button {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-}
-
-.bank-payment .payment-nav .back-button h3 {
-  font-family: "Arial";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 20px;
-  color: #000000;
-  padding-left: 16px;
-}
-
-.bank-payment .payment-nav h4 {
-  font-family: "Arial";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 18px;
-  color: #000000;
-  padding-left: 40px;
-  letter-spacing: -0.8px;
-}
-
 .bank-payment .state-payment {
   display: flex;
   justify-content: right;
@@ -112,14 +73,14 @@
   padding: 0 12px;
 }
 
-.bank-payment .bank-detail {
+.bank-payment .pembayaranbank {
   display: flex;
   width: 90%;
   margin: auto;
   margin-top: 56px;
 }
 
-.bank-payment .bank-detail .payment-deadline {
+.bank-payment .pembayaranbank .payment1 {
   background: #ffffff;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
@@ -128,7 +89,7 @@
   justify-content: space-between;
 }
 
-.bank-payment .bank-detail .payment-deadline h3 {
+.bank-payment .pembayaranbank .payment1 h3 {
   font-family: "Arial";
   font-style: normal;
   font-weight: 700;
@@ -137,7 +98,7 @@
   color: #000000;
 }
 
-.bank-payment .bank-detail .payment-deadline p {
+.bank-payment .pembayaranbank .payment1 p {
   font-family: "Arial";
   font-style: normal;
   font-weight: 400;
@@ -147,13 +108,13 @@
   padding-top: 15px;
 }
 
-.bank-payment .bank-detail .payment-deadline .countdown {
+.bank-payment .pembayaranbank .payment1 .countdown {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.bank-payment .bank-detail .payment-deadline .countdown span {
+.bank-payment .pembayaranbank .payment1 .countdown span {
   font-family: "Arial";
   font-style: normal;
   font-weight: 400;
@@ -169,7 +130,7 @@
   margin: 0 5px;
 }
 
-.bank-payment .bank-detail .transfer-detail {
+.bank-payment .pembayaranbank .transfer1 {
   background: #ffffff;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
@@ -177,7 +138,7 @@
   margin-top: 24px;
 }
 
-.bank-payment .bank-detail .transfer-detail h3 {
+.bank-payment .pembayaranbank .transfer1 h3 {
   font-family: "Arial";
   font-style: normal;
   font-weight: 700;
@@ -185,14 +146,51 @@
   line-height: 20px;
   color: #000000;
 }
+.bank-payment .payment-nav .back-button {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
 
-.bank-payment .bank-detail .transfer-detail .cont {
+.bank-payment .payment-nav .back-button h3 {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  padding-left: 16px;
+}
+.bank-payment .bg {
+  height: 164px;
+  background: #f1f3ff;
+}
+
+.bank-payment .payment-nav {
+  width: 90%;
+  position: relative;
+  margin: auto;
+  margin-top: -56px;
+}
+
+.bank-payment .payment-nav h4 {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #000000;
+  padding-left: 40px;
+  letter-spacing: -0.8px;
+}
+
+.bank-payment .pembayaranbank .transfer1 .cont {
   display: flex;
   align-items: center;
   padding-top: 16px;
 }
 
-.bank-payment .bank-detail .transfer-detail .cont .bank {
+.bank-payment .pembayaranbank .transfer1 .cont .bank {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -209,7 +207,7 @@
   color: #000000;
 }
 
-.bank-payment .bank-detail .transfer-detail .cont h5 {
+.bank-payment .pembayaranbank .transfer1 .cont h5 {
   font-family: "Arial";
   font-style: normal;
   font-weight: 400;
@@ -219,7 +217,7 @@
   padding-left: 16px;
 }
 
-.bank-payment .bank-detail .transfer-detail p {
+.bank-payment .pembayaranbank .transfer1 p {
   font-family: "Arial";
   font-style: normal;
   font-weight: 400;
@@ -229,7 +227,7 @@
   padding: 0 0 0 77px;
 }
 
-.bank-payment .bank-detail .transfer-detail h4 {
+.bank-payment .pembayaranbank .transfer1 h4 {
   font-family: "Rubik";
   font-style: normal;
   font-weight: 300;
@@ -240,18 +238,7 @@
   padding-bottom: 8px;
 }
 
-.bank-payment .bank-detail .transfer-detail .account,
-.bank-payment .bank-detail .transfer-detail .total-payment {
-  display: flex;
-  height: 36px;
-  align-items: center;
-  background: #ffffff;
-  border: 1px solid #3c3c3c;
-  border-radius: 2px;
-  justify-content: space-between;
-}
-
-.bank-payment .bank-detail .transfer-detail .account .account-number {
+.bank-payment .pembayaranbank .transfer1 .account .account-number {
   font-family: "Arial";
   font-style: normal;
   font-weight: 400;
@@ -261,7 +248,7 @@
   padding-left: 12px;
 }
 
-.bank-payment .bank-detail .transfer-detail .total-payment .price-to-pay {
+.bank-payment .pembayaranbank .transfer1 .totalpayment .price-to-pay {
   font-family: "Arial";
   font-style: normal;
   font-weight: 700;
@@ -270,14 +257,24 @@
   color: #3c3c3c;
   padding-left: 12px;
 }
+.bank-payment .pembayaranbank .transfer1 .account,
+.bank-payment .pembayaranbank .transfer1 .totalpayment {
+  display: flex;
+  height: 36px;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #3c3c3c;
+  border-radius: 2px;
+  justify-content: space-between;
+}
 
-.bank-payment .bank-detail .transfer-detail button {
+.bank-payment .pembayaranbank .transfer1 button {
   border: none;
   background: none;
   display: flex;
 }
 
-.bank-payment .bank-detail .payment-instr {
+.bank-payment .pembayaranbank .payment5 {
   background: #ffffff;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
@@ -287,7 +284,7 @@
   margin-bottom: 24px;
 }
 
-.bank-payment .bank-detail .payment-instr h3 {
+.bank-payment .pembayaranbank .payment5 h3 {
   font-family: "Arial";
   font-style: normal;
   font-weight: 700;
@@ -297,14 +294,14 @@
   padding-bottom: 24px;
 }
 
-.bank-payment .bank-detail .payment-instr .bloc-tabs {
+.bank-payment .pembayaranbank .payment5 .bloc-tabs {
   display: flex;
   align-items: center;
   text-align: center;
   justify-content: space-between;
 }
 
-.bank-payment .bank-detail .payment-instr .bloc-tabs .tabs {
+.bank-payment .pembayaranbank .payment5 .bloc-tabs .tabs {
   font-family: "Arial";
   font-style: normal;
   font-weight: 400;
@@ -322,26 +319,26 @@
   cursor: pointer;
 }
 
-.bank-payment .bank-detail .payment-instr .bloc-tabs .tabs.active-tabs {
+.bank-payment .pembayaranbank .payment5 .bloc-tabs .tabs.active-tabs {
   font-weight: 700;
   border-bottom: 1px solid #5cb85f;
 }
 
-.bank-payment .bank-detail .payment-instr .content {
+.bank-payment .pembayaranbank .payment5 .content {
   display: none;
 }
 
-.bank-payment .bank-detail .payment-instr .active-content {
+.bank-payment .pembayaranbank .payment5 .active-content {
   display: block;
 }
 
-.bank-payment .bank-detail .payment-instr ul {
+.bank-payment .pembayaranbank .payment5 ul {
   padding-top: 16px;
   padding-left: 24px;
   list-style: disc;
 }
 
-.bank-payment .bank-detail .payment-instr ul li {
+.bank-payment .pembayaranbank .payment5 ul li {
   font-family: "Arial";
   font-style: normal;
   font-weight: 400;
@@ -350,14 +347,14 @@
   color: #8a8a8a;
 }
 
-.bank-payment .bank-detail .confirm-payment {
+.bank-payment .pembayaranbank .confirm-payment {
   background: #ffffff;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
   padding: 24px;
 }
 
-.bank-payment .bank-detail .confirm-payment h5 {
+.bank-payment .pembayaranbank .confirm-payment h5 {
   font-family: "Arial";
   font-style: normal;
   font-weight: 400;
@@ -369,14 +366,14 @@
   padding-bottom: 20px;
 }
 
-.bank-payment .bank-detail .confirm-payment .confirm-count {
+.bank-payment .pembayaranbank .confirm-payment .confirm-count {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 15px;
 }
 
-.bank-payment .bank-detail .confirm-payment .confirm-count h3 {
+.bank-payment .pembayaranbank .confirm-payment .confirm-count h3 {
   font-family: "Arial";
   font-style: normal;
   font-weight: 700;
@@ -385,13 +382,13 @@
   color: #000000;
 }
 
-.bank-payment .bank-detail .confirm-payment .confirm-count .countdown {
+.bank-payment .pembayaranbank .confirm-payment .confirm-count .countdown {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.bank-payment .bank-detail .confirm-payment .confirm-count .countdown span {
+.bank-payment .pembayaranbank .confirm-payment .confirm-count .countdown span {
   font-family: "Arial";
   font-style: normal;
   font-weight: 400;
@@ -407,7 +404,7 @@
   margin: 0 5px;
 }
 
-.bank-payment .bank-detail .confirm-payment p {
+.bank-payment .pembayaranbank .confirm-payment p {
   font-family: "Arial";
   font-style: normal;
   font-weight: 400;
@@ -416,7 +413,7 @@
   color: #000000;
 }
 
-.bank-payment .bank-detail .confirm-payment h4 {
+.bank-payment .pembayaranbank .confirm-payment h4 {
   font-family: "Arial";
   font-style: normal;
   font-weight: 400;
@@ -426,12 +423,12 @@
   padding: 24px 0 8px;
 }
 
-.bank-payment .bank-detail .confirm-payment .upload-img {
+.bank-payment .pembayaranbank .confirm-payment .upload-img {
   margin-top: 16px;
   text-align: center;
 }
 
-.bank-payment .bank-detail .confirm-payment button {
+.bank-payment .pembayaranbank .confirm-payment button {
   width: 100%;
   height: 36px;
   background: #5cb85f;
@@ -446,7 +443,7 @@
   margin-top: 24px;
 }
 
-.bank-payment .bank-detail .confirm-payment a {
+.bank-payment .pembayaranbank .confirm-payment a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -468,7 +465,7 @@
     width: 100%;
   }
 
-  .bank-payment .bank-detail {
+  .bank-payment .pembayaranbank {
     width: 100%;
   }
 
