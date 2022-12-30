@@ -33,8 +33,7 @@ const Dashboard = () => {
 
     const headers = {
       "Content-Type": "application/json",
-      Authorization:
-        "access_token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGJjci5pbyIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTY3MTU4NzkyMX0.ISh7PDXJrm2QW1l_OJWkl4NC1p0XKhoPMHSn-kMhEMQ",
+      Authorization: "access_token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGJjci5pbyIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTY3MTU4NzkyMX0.ISh7PDXJrm2QW1l_OJWkl4NC1p0XKhoPMHSn-kMhEMQ",
     };
 
     const params = {
@@ -42,13 +41,9 @@ const Dashboard = () => {
       until: endMonth,
     };
 
-    Axios.get(
-      `https://bootcamp-rent-cars.herokuapp.com/admin/order/reports`,
-      params,
-      {
-        headers: headers,
-      }
-    )
+    Axios.get(`https://bootcamp-rent-cars.herokuapp.com/admin/order/reports`, params, {
+      headers: headers,
+    })
       .then((response) => {
         setData(response.data);
         console.log(response.data);
@@ -82,6 +77,7 @@ const Dashboard = () => {
       <CMS_Topbar />
       <div className="container">
         <div className="row">
+
           <div className="col-2">
             <CMS_Sidebar />
           </div>

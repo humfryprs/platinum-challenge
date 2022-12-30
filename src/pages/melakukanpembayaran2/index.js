@@ -1,13 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-// import ArrowLeft from "./assets/arrow-left.svg";
-// import Rect from "./assets/rect.svg";
+
+import Dropzone from "react-dropzone-uploader";
 import Copy from "./assets/copy.svg";
+import { Container, Row } from "react-bootstrap";
 import Upload from "./assets/upload.png";
 import "./style.css";
 import Nav_Step from "../../components/nav-step";
 
 const Payment2 = () => {
+  const onDrop = (acceptedFiles) => {
+    acceptedFiles.forEach((file) => {
+      console.log(file.name);
+    });
+  };
   const [timeRemaining, setTimeRemaining] = useState(86400);
   useEffect(() => {
     const interval = setInterval(() => {
@@ -96,12 +102,12 @@ const Payment2 = () => {
       {dataBank.map((data, key) => {
         return (
           <div className="container" key={key}>
-            <div className="bank-detail">
-              <div className="container">
-                <div className="row">
+            <div className="pembayaranbank">
+              <Container>
+                <Row>
                   <div className="col-lg-7 col-md-12">
-                    <div className="payment-deadline">
-                      <div className="deadline-date">
+                    <div className="payment1">
+                      <div className="payment2">
                         <h3>Selesaikan Pembayaran Sebelum</h3>
                         <p>Rabu, 19 Mei 2022 jam 13.00 WIB</p>
                       </div>
@@ -109,7 +115,7 @@ const Payment2 = () => {
                         <span>{hours}</span>:<span>{minutes}</span>:<span>{seconds}</span>
                       </div>
                     </div>
-                    <div className="transfer-detail">
+                    <div className="transfer1">
                       <h3>Lakukan Transfer Ke</h3>
                       <div className="cont">
                         <div className="bank">{data.name}</div>
@@ -126,7 +132,7 @@ const Payment2 = () => {
                         </button>
                       </div>
                       <h4>Total Bayar</h4>
-                      <div className="total-payment">
+                      <div className="totalpayment">
                         <p className="price-to-pay" defaultValue={copyText} onChange={(e) => setCopyText(e.target.defaultValue)}>
                           Rp 3.500.000
                         </p>
@@ -135,7 +141,7 @@ const Payment2 = () => {
                         </button>
                       </div>
                     </div>
-                    <div className="payment-instr">
+                    <div className="payment5">
                       <h3>Intruksi Pembayaran</h3>
                       <div className="bloc-tabs">
                         <div className="col-3">
@@ -175,39 +181,14 @@ const Payment2 = () => {
                             <li>Ambil dan simpanlah bukti transaksi tersebut</li>
                           </ul>
                         </div>
-                        <div className={toggleState === 2 ? "content active-content" : "content"}>
-                          <ul>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, suscipit?</li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, vero.</li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, ratione?</li>
-                            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, nulla.</li>
-                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed, aliquid?</li>
-                          </ul>
-                        </div>
-                        <div className={toggleState === 3 ? "content active-content" : "content"}>
-                          <ul>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, suscipit?</li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, vero.</li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, ratione?</li>
-                          </ul>
-                        </div>
-                        <div className={toggleState === 4 ? "content active-content" : "content"}>
-                          <ul>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, suscipit?</li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, vero.</li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, ratione?</li>
-                            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, nulla.</li>
-                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed, aliquid?</li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, reprehenderit.</li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, totam?</li>
-                          </ul>
-                        </div>
+                        <div className={toggleState === 2 ? "content active-content" : "content"}></div>
+                        <div className={toggleState === 3 ? "content active-content" : "content"}></div>
+                        <div className={toggleState === 4 ? "content active-content" : "content"}></div>
                       </div>
                     </div>
                   </div>
                   <div className="col-lg-5 col-md-12">
                     <div className="confirm-payment">
-                      <h5>Klik konfirmasi pembayaran untuk mempercepat proses pengecekan</h5>
                       <div className="confirm-count">
                         <h3>Konfirmasi Pembayaran</h3>
                         <div className="countdown">
@@ -219,14 +200,21 @@ const Payment2 = () => {
                       <p>Untuk membantu kami lebih cepat melakukan pengecekan. Kamu bisa upload bukti bayarmu</p>
                       <div className="upload-img">
                         <img src={Upload} alt="upload" />
+                        <Dropzone onDrop={onDrop} accept="image/*">
+                          {({ getRootProps, getInputProps }) => (
+                            <div {...getRootProps()}>
+                              <input {...getInputProps()} />
+                              Drag and drop some files here, or click to select files
+                            </div>
+                          )}
+                        </Dropzone>
                       </div>
-                      <button>Konfirmasi Pembayaran</button>
-                      <button>Upload</button>
-                      <Link to={"/payment/bank-confirm/e-ticket"}>Konfirmasi</Link>
+
+                      <Link to={"/e-ticket"}>Konfirmasi</Link>
                     </div>
                   </div>
-                </div>
-              </div>
+                </Row>
+              </Container>
             </div>
           </div>
         );
