@@ -35,7 +35,6 @@ import Signin from "./pages/signin";
 import Payment2 from "./pages/melakukanpembayaran2";
 import Dashboard from "./pages/dashboard";
 
-
 const WithAuth = () => {
   const isAuth = window.localStorage.getItem("access_token");
   return (
@@ -50,16 +49,16 @@ const App = () => {
   const location = useLocation();
   return (
     <div className="App">
-      {location.pathname !== "/sign-in" && location.pathname !== "/sign-up" && (
-        <Header />
-      )}
+      {location.pathname !== "/sign-in" &&
+        location.pathname !== "/sign-up" &&
+        location.pathname !== "/dashboard" && <Header />}
 
       <Routes>
         {/* {/ Public /} */}
         <Route path="/sign-up" element={<Signup />} />
         <Route path="/sign-in" element={<Signin />} />
         <Route path="/" element={<Homepage />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard" element={<Dashboard />} />
 
         {/* {/ WithAuth /} */}
         <Route element={<WithAuth />}>
@@ -71,9 +70,10 @@ const App = () => {
         </Route>
       </Routes>
 
-      {location.pathname !== "/sign-in" && location.pathname !== "/sign-up" && (
-        <Footer />
-      )}
+      {location.pathname !== "/sign-in" &&
+        location.pathname !== "/sign-up" &&
+        location.pathname !== "/dashboard" &&
+        location.pathname !== "/dashboard" && (<Footer />)}
     </div>
   );
 };

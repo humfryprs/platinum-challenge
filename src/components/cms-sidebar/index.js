@@ -1,12 +1,15 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import "./style.scss";
-import Logo from "./images/tokopedia-logo.svg";
-import Icon_X from "./images/fi_x.svg";
+// import { useNavigate } from "react-router-dom";
+// import Logo from "./images/tokopedia-logo.svg";
+// import Icon_X from "./images/fi_x.svg";
 import Icon_Menu from "./images/fi_menu.svg";
 
+import Home from "./images/Home.png";
+import Admin from "./images/Administrator.png";
+import "./style.scss";
+
 const CMS_Sidebar = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const [active, setActive] = useState(false);
 
@@ -19,39 +22,29 @@ const CMS_Sidebar = () => {
   };
 
   return (
-		
-      <div className="container">
-        <div className="row">
-          <div className="logo">
-            <a href="" onClick={() => navigate("/dashboard")}>
-              <img src={Logo} alt=""></img>
-            </a>
-          </div>
-          <div className={`sidebar ${active ? "menu-active" : ""}`}>
-            <div className="top-sidebar">
-              <h5>BCR</h5>
-              <div className="close-icon" onClick={closeSidebar}>
-                <img src={Icon_X} alt=""></img>
-              </div>
-            </div>
-            <ul className="menu">
-              <li>
-                <a href="hide-nav-menu" onClick={() => navigate("/dashboard")}>
-                  Dashboard
-                </a>
-              </li>
-              <li>
-                <a href="hide-nav-menu" onClick={() => navigate("/cars")}>
-                  Cars
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div className="burger-icon" onClick={openSidebar}>
-            <img src={Icon_Menu} alt=""></img>
-          </div>
+    <div className="left-sidebar">
+      <div className="left-burger-icon " onClick={closeSidebar}>
+        <img src={Icon_Menu} alt="" />
+      </div>
+      <ul>
+        <li>
+          <a href="" onClick={openSidebar}>
+            <img src={Home} alt="" />
+          </a>
+        </li>
+        <li>
+          <a href="" onClick={openSidebar}>
+            <img src={Admin} alt="" />
+          </a>
+        </li>
+      </ul>
+      <div className={`${active ? "expand-bar-active" : ""}`}>
+        <div className="expand-bar">
+          <h3>Dashboard</h3>
+          <p>Dashboard</p>
         </div>
       </div>
+    </div>
   );
 };
 export default CMS_Sidebar;

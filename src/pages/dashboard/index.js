@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-// import CMS_Sidebar from "../../components/cms-sidebar";
+import CMS_Sidebar from "../../components/cms-sidebar";
+import CMS_Topbar from "../../components/cms-topbar";
 import { Bar } from "react-chartjs-2";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -77,14 +78,14 @@ const Dashboard = () => {
   };
 
   return (
-    <div>
-      {/* <CMS_Sidebar /> */}
+    <div className="dashboard">
+      <CMS_Topbar />
       <div className="container">
         <div className="row">
-          <div className="col-3">
-            
+          <div className="col-2">
+            <CMS_Sidebar />
           </div>
-          <div className="col-9">
+          <div className="col-10">
             <DatePicker
               selected={startDate}
               onChange={(date) => setStartDate(date)}
